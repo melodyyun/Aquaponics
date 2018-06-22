@@ -1,0 +1,31 @@
+html body{
+    background: $backgroundDark;
+    font-size: 62.5%;
+}
+
+
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+}
+
+//grid layout
+.grid-col-2{
+    @include grid($grid-col-3);
+}
+
+.grid-col-3{
+    @include grid($grid-col-4);
+}
+
+//a tag
+a{
+    color: $black;
+    text-decoration: none;
+}

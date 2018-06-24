@@ -1,6 +1,9 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
+//custom imports
+import Nav from './Nav';
+
 class Header extends React.Component {
   constructor() {
     super();
@@ -13,6 +16,7 @@ class Header extends React.Component {
   render() {
     return(
       <header>
+      <Nav />
         <div className="wrapper">
           <h1 className="titleText">Aquaponics</h1>
           <h2>aquaculture + hydroponics</h2>
@@ -28,7 +32,8 @@ class Header extends React.Component {
                 }
               },
               color: {
-                value: "#ffffff"
+                value: "#ffffff",
+                value: ["#bff", "#8ef", "#bef"]
               },
               shape: {
                 type: "circle",
@@ -47,7 +52,7 @@ class Header extends React.Component {
               },
               opacity: {
                 value: 0.5,
-                random: false,
+                random: true,
                 anim: {
                   enable: false,
                   speed: 1,
@@ -68,8 +73,8 @@ class Header extends React.Component {
                 }
               },
               size: {
-                value: 5,
-                random: false,
+                value: 7,
+                random: true,
                 anim: {
                   enable: false,
                   speed: 40,
@@ -90,13 +95,59 @@ class Header extends React.Component {
                   rotateY: 1200
                 }
               },
-
-            }
+              array: []
+            },
+            interactivity: {
+              detect_on: 'canvas',
+              events: {
+                onhover: {
+                  enable: false,
+                  mode: 'grab'
+                },
+                onclick: {
+                  enable: false,
+                  mode: 'push'
+                },
+                resize: true
+              },
+              modes: {
+                grab: {
+                  distance: 100,
+                  line_linked: {
+                    opacity: 1
+                  }
+                },
+                bubble: {
+                  distance: 200,
+                  size: 80,
+                  duration: 0.4
+                },
+                repulse: {
+                  distance: 200,
+                  duration: 0.4
+                },
+                push: {
+                  particles_nb: 4
+                },
+                remove: {
+                  particles_nb: 2
+                }
+              },
+              mouse: {}
+            },
+            retina_detect: false,
+            fn: {
+              interact: {},
+              modes: {},
+              vendors: {}
+            },
           }}
           style={{
             width: '100%',
             height: '100%',
-            // backgroundImage: `url(${logo})`
+            position: 'fixed',
+            top: 0,
+            zIndex: -1
           }}
         />
       </header>

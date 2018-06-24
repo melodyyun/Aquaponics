@@ -9,7 +9,7 @@ class About extends React.Component {
     return (
       <section>
         <div className="wrapper">
-          <h2 className="titleText">About Aquaponics?</h2>
+          <h2 className="subHeading">What is Aquaponics?</h2>
         </div>
       </section>
     )

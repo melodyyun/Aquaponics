@@ -19,7 +19,19 @@ class Header extends React.Component {
       <Nav />
         <div className="wrapper">
           <h1 className="titleText">Aquaponics</h1>
-          <h2>aquaculture + hydroponics</h2>
+          <div className="header-grid">
+            <div>
+              <img id="fish" src="./public/assets/fish.svg" alt="fish"/>
+              <h2>aquaculture</h2>
+            </div>
+            <div id="plus">
+              <h2>+</h2>
+            </div>
+            <div>
+              <img id="pot-plant"  src="./public/assets/pot-plant.svg" alt="plant" />
+              <h2>hydroponics</h2>
+            </div>
+          </div>
         </div>
         <Particles
           params={{

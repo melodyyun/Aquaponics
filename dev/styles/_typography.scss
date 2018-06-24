@@ -1,3 +1,20 @@
+//---------
+// Header
+//---------
 .titleText{
-    @include font($titleText);
+    @include font($titleText...);
+}
+
+nav{
+    @include font($secondaryText...);
+}
+
+.header-grid{
+    @include font(12, ('Open Sans Condensed', sans-serif));
+    h2{
+        margin: 0;
+    }
+}
+#plus{
+    @include font(25, ('Fredericka the Great', cursive));
 }

@@ -12,9 +12,10 @@ class Header extends React.Component {
 
   render() {
     return(
-      <section>
+      <header>
         <div className="wrapper">
           <h1 className="titleText">Aquaponics</h1>
+          <h2>aquaculture + hydroponics</h2>
         </div>
         <Particles
           params={{
@@ -98,7 +99,7 @@ class Header extends React.Component {
             // backgroundImage: `url(${logo})`
           }}
         />
-      </section>
+      </header>
     )
   }
 };

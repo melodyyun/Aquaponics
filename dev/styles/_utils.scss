@@ -2,8 +2,8 @@
 $background: #F7FDFF;
 $backgroundDark: #66b2b2;
 $backgroundTransparent: rgba(247, 253, 255, 0.85);
-$backgroundBlueTransparent: rgba(229, 255, 255, 0.5);
-$backgroundPurpleTransparent: rgba(225, 225, 249, 0.5);
+$backgroundBlueTransparent: rgba(151, 255, 255, 0.3);
+$backgroundPurpleTransparent: rgba(182, 182, 255, 0.3);
 
 $white: #FFF;
 $beige: #F7F7F7;
@@ -70,7 +70,7 @@ $grid-col-4: 1fr 3fr 3fr 1fr;
     font-family: $family;
     font-weight: 400;
     color: $black;
-    line-height: 100%;
+    //line-height: 100%;
 }
 
 

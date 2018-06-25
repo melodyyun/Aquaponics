@@ -1,13 +1,17 @@
 .about{
   margin: 3rem 0;
-  padding: 2rem;
-  background: linear-gradient($backgroundBlueTransparent , $backgroundPurpleTransparent);
-  border-radius: 20px;
+  padding: 2rem 0;
+  .wrapper{
+    width: 80%;
+    background: linear-gradient($backgroundBlueTransparent , $backgroundPurpleTransparent);
+    border-radius: 20px;
+    padding: 2rem;
+  }
 }
 
 .about-grid{
-     @include grid($grid-about);
-     margin: 3rem 0;
+  @include grid($grid-about);
+  margin: 3rem 0;
   }
   img{
     height: 150px;
@@ -43,8 +47,4 @@
   65%{
     transform: rotate(4deg) translateX(-4px);
   }
-}
-
-.hide{
-  transform: translateY(-100%);
 }

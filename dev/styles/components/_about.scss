@@ -1,0 +1,50 @@
+.about{
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient($backgroundBlueTransparent , $backgroundPurpleTransparent);
+  border-radius: 20px;
+}
+
+.about-grid{
+     @include grid($grid-about);
+     margin: 3rem 0;
+  }
+  img{
+    height: 150px;
+  }
+  #fish{
+    animation: swim 3s linear infinite;
+  }
+  #pot-plant{
+    animation: wind 5s linear infinite;
+    transform-origin: bottom;
+  }
+
+//keyframes for header
+@keyframes swim {
+  0%{
+    transform: translateY(0);
+  }
+  30%{
+    transform: translateY(10px) translateX(5px);
+  }
+  80%{
+    transform: translateY(-10px) translateX(-2px);
+  }
+}
+
+@keyframes wind {
+  0%{
+    transform: rotate(0deg) translateX(0);
+  }
+  20%{
+    transform: rotate(-3deg) translateX(2px);
+  }
+  65%{
+    transform: rotate(4deg) translateX(-4px);
+  }
+}
+
+.hide{
+  transform: translateY(-100%);
+}

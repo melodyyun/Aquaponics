@@ -9,12 +9,21 @@ nav{
     @include font($secondaryText...);
 }
 
-.header-grid{
-    @include font(12, ('Open Sans Condensed', sans-serif));
+header{
     h2{
-        margin: 0;
+        @include font(14, ('Open Sans Condensed', sans-serif) );
     }
 }
-#plus{
-    @include font(25, ('Fredericka the Great', cursive));
+
+.about{
+    @include font(12, ('Open Sans Condensed', sans-serif) );
+    .about-grid{
+        @include font(12, ('Open Sans Condensed', sans-serif));
+        h2{
+            margin: 0;
+        }
+    }
+    #plus{
+        @include font(25, ('Fredericka the Great', cursive));
+    }
 }

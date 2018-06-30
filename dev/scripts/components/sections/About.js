@@ -36,6 +36,9 @@ class About extends React.Component {
               Together we can feed the world!
             </p>
           </div>
+          <div className="display-flex center-flex">
+            <button >Start Journey</button>
+          </div>
         </div>
       </section>;
   }

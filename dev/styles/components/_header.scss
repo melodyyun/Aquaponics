@@ -1,5 +1,8 @@
+//-----
+//nav
+//-----
 nav{
-  background: linear-gradient($white, $backgroundTransparent);
+  background: linear-gradient( $backgroundTransparent, $white);
   ul{
     padding-left: 0;
     margin: 0;
@@ -26,6 +29,19 @@ nav{
         content: ""
       }
     }
+  }
+}
+
+//------
+//Hero
+//------
+header{
+  .wrapper{
+    height: calc(100vh - 139px);
+    display: flex;
+    flex-flow: column;
+    //align-items: center;
+    justify-content: center;
   }
 }
 

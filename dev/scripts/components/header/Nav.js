@@ -36,7 +36,7 @@ class Nav extends React.Component {
           </li>
           <li>
             <a href="https://melodyyun.com/" target="_blank">
-              Contact
+              About Me
               </a>
           </li>
         </ul>

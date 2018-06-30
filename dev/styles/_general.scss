@@ -1,5 +1,5 @@
 html body{
-    background: $background;
+    background: $white;
     font-size: 62.5%;
 }
 
@@ -31,4 +31,20 @@ html body{
 a{
     color: $black;
     text-decoration: none;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.center-flex{
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(-45deg, $purple, $teal);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
 }

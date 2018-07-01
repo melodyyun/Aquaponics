@@ -37,7 +37,7 @@ class About extends React.Component {
             </p>
           </div>
           <div className="display-flex center-flex">
-            <button >Start Journey</button>
+            <button className="btn ripple" >Start Journey</button>
           </div>
         </div>
       </section>;

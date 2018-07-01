@@ -41,10 +41,37 @@ a{
     justify-content: center;
 }
 
-button {
-    background: linear-gradient(-45deg, $purple, $teal);
-    border: none;
+.btn {
+    background: $paperTransparent;
+    border: 1px solid $black;
     padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    color: white;
+    margin: 1rem;
 }
+.ripple{
+  position: relative;
+  overflow: hidden; 
+}
+
+.ripple:before {
+  border-radius: 50%;
+  background-color: $backgroundTransparent;
+  content:'';
+  position: absolute;
+  top: 50%; left: 50%;
+  width:0; height:0;
+}
+
+.ripple:hover {
+  background: $black;
+  color: $white;
+}
+
+.ripple:focus:before {
+  transition: all 0.5s ease-out;
+  opacity:0;
+  width:160px;
+  height:160px;
+  margin-top:-80px;
+  margin-left:-80px;
+}
+

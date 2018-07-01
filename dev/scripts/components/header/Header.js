@@ -1,8 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
-//custom imports
-import Nav from './Nav';
 
 class Header extends React.Component {
   constructor() {
@@ -16,7 +14,6 @@ class Header extends React.Component {
   render() {
     return(
       <header>
-      <Nav />
         <div className="wrapper">
           <h1 className="titleText">Aquaponics</h1>
           <h2 className="subTitle">A society grows when the old plant trees whose shade they know they shall never sit in. </h2>

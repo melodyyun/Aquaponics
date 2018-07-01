@@ -6,7 +6,17 @@ class Nav extends React.Component {
     this.state = {
       zero: 0,
     }
+    this.navBtn = React.createRef();
+    this.goToPage = this.goToPage.bind(this);
     this.handleNavScroll = this.handleNavScroll.bind(this);
+  }
+
+  // componentDidMount() {
+  //   console.log(this.refs.navBtn);
+  // }
+  //handle page change
+  goToPage() {
+    this.props.history.push('/DIY');
   }
 
   //hide nav scroll on scroll down
@@ -25,9 +35,12 @@ class Nav extends React.Component {
     return <nav ref="nav">
         <ul>
           <li>
-          <a href="https://www.desima.co/blog/2016/2/18/mason-jar-aquaponics" target="_blank">
+            <a 
+            onClick={this.goToPage}
+            data="DIY" 
+            ref={this.navBtn}>
               DIY
-              </a>
+            </a>
           </li>
           <li>
             <a href="https://aquagrowfarms.ca/" target="_blank">

@@ -53,15 +53,23 @@ header{
   #branches{
     position: absolute;
     left: -53px;
-    bottom: -50px;
+    bottom: -80px;
     height: 300px;
     transform: rotate(67deg);
+    animation: branchInWind 7s ease-out infinite;
   }
 }
 
 @keyframes pourWater {
   0%{transform: rotate(0deg)}
   50%{transform: rotate(-20deg)}
+}
+
+@keyframes branchInWind {
+  0%{transform: rotate(67deg)}
+  20%{transform: rotate(68deg)}
+  50%{transform: rotate(66deg)}
+  80%{transform: rotate(69deg)}
 }
 
 // @keyframes strike{

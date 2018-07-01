@@ -65,3 +65,26 @@
     transform: rotate(4deg) translateX(-4px);
   }
 }
+
+//paper box shadow effect
+.paperBoxShadow{
+    position: relative;
+    &:before, &:after{
+      z-index: -1;
+      position: absolute;
+      content: '';
+      bottom: 1em;
+      width: 50%;
+      top: 80%;  
+      background: $color-shadow;
+      box-shadow: 0 1em .5em $color-shadow;   
+    }
+    &:before{
+      transform: rotate(-3deg); 
+      left: .5em;     
+    }
+    &:after{
+      transform: rotate(3deg);    
+      right: .5em;    
+    }
+  }

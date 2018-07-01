@@ -21,6 +21,8 @@ class Header extends React.Component {
           <h1 className="titleText">Aquaponics</h1>
           <h2 className="subTitle">A society grows when the old plant trees whose shade they know they shall never sit in. </h2>
         </div>
+        <img id="watering-can" src="./public/assets/watering-can.svg" alt="watering can with flowers"/>
+        <img id="branches" src="./public/assets/branches.svg" alt="flowers"/>
         <Particles
           params={{
             particles: {

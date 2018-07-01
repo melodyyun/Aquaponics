@@ -36,13 +36,32 @@ nav{
 //Hero
 //------
 header{
+  position: relative;
   .wrapper{
     height: calc(100vh - 139px);
     display: flex;
     flex-flow: column;
-    //align-items: center;
     justify-content: center;
   }
+  #watering-can{
+    position: absolute;
+    right:5%;
+    top: 25%;
+    height: 230px;
+    animation: pourWater 10s ease-in-out infinite;
+  }
+  #branches{
+    position: absolute;
+    left: -53px;
+    bottom: -50px;
+    height: 300px;
+    transform: rotate(67deg);
+  }
+}
+
+@keyframes pourWater {
+  0%{transform: rotate(0deg)}
+  50%{transform: rotate(-20deg)}
 }
 
 // @keyframes strike{

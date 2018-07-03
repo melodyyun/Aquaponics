@@ -7,21 +7,27 @@ import Index from '../index/Index';
 import NotFound from './NotFound';
 import DIY from '../sections/DIY';
 
-const Router = () => {
-  return(
-    <React.Fragment>
-      <Nav />
-      <BrowserRouter>
-        <Switch>
-          <Route exact path = "/" component = { Home } />
-          <Route path = "/journey" component = { Journey } />
-          <Route path = "/DIY" component = {DIY} />
-          <Route path = "/farm/:farmId" component = { Index } />
-          <Route component = { NotFound } />
-        </Switch>
-      </BrowserRouter>
-    </React.Fragment>
-  )
+class Router extends React.Component {
+  constructor() {
+    super();
+  };
+
+  render() {
+    return(
+        <BrowserRouter>
+          <div>
+            <Nav />
+            <Switch>
+              <Route exact path = "/" component = { Home } />
+              <Route path = "/journey" component = { Journey } />
+              <Route path = "/DIY" component = {DIY} />
+              <Route path = "/farm/:farmId" component = { Index } />
+              <Route component = { NotFound } />
+            </Switch>
+          </div>
+        </BrowserRouter>
+    )
+  }
 }
 
 export default Router;

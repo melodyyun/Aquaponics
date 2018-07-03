@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Nav extends React.Component {
   constructor() {
@@ -35,23 +36,25 @@ class Nav extends React.Component {
     return <nav ref="nav">
         <ul>
           <li>
-            <a 
-            onClick={this.goToPage}
-            data="DIY" 
-            ref={this.navBtn}>
+            <NavLink to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/DIY">
               DIY
-            </a>
+            </NavLink>
           </li>
           <li>
             <a href="https://aquagrowfarms.ca/" target="_blank">
               Contribute
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://melodyyun.com/" target="_blank">
               About Me
-              </a>
-          </li>
+            </a>
+          </li> */}
         </ul>
       </nav>;
   }

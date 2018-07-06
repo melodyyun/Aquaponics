@@ -18,36 +18,36 @@ class DIY extends React.Component {
       userImg: "",
     }
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
-    this.login = this.login.bind(this);
+    //this.login = this.login.bind(this);
   };
 
   //googleLogin
 
-  login() {
-    const uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          return true;
-        },
-        uiShown: function () {
-          // The widget is rendered.
-          // Hide the loader.
-          document.getElementById('loader').style.display = 'none';
-        }
-      },
-      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-      signInFlow: 'popup',
-      signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      ],
-    };
-  }
+  // login() {
+  //   const uiConfig = {
+  //     callbacks: {
+  //       signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+  //         // User successfully signed in.
+  //         // Return type determines whether we continue the redirect automatically
+  //         // or whether we leave that to developer to handle.
+  //         return true;
+  //       },
+  //       uiShown: function () {
+  //         // The widget is rendered.
+  //         // Hide the loader.
+  //         document.getElementById('loader').style.display = 'none';
+  //       }
+  //     },
+  //     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+  //     signInFlow: 'popup',
+  //     signInOptions: [
+  //       // Leave the lines as is for the providers you want to offer your users.
+  //       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  //       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+  //       firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  //     ],
+  //   };
+  // }
 
 
   loginWithGoogle() {
@@ -56,6 +56,7 @@ class DIY extends React.Component {
       .auth()
       .signInWithPopup(provider)
       .then(user => {
+        console.log(user);
         const firebaseUid = user.user.uid;
         const firebaseName = user.user.displayName;
         const firebaseImg = user.user.photoURL;
@@ -65,18 +66,16 @@ class DIY extends React.Component {
             userName: firebaseName,
             userImg: firebaseImg,
             loggedIn: true
-          },
-          () => {
-            const userInfo = {
-              userName: firebaseName,
-              userImg: firebaseImg
-            };
-            firebase
-              .database()
-              .ref(`users/accountInfo/${firebaseUid}`)
-              .set(userInfo);
-          }
-        );
+          })
+        console.log(this.state);
+        const userInfo = {
+          userName: firebaseName,
+          userImg: firebaseImg
+        };
+        firebase
+          .database()
+          .ref(`users/accountInfo/${firebaseUid}`)
+          .set(userInfo);
       })
       .catch(err => {
         console.log(err);
@@ -95,7 +94,7 @@ class DIY extends React.Component {
       {this.state.loggedIn === true ? (
         <button onClick={this.logout}> Log Out </button>
       ): (
-        <button onClick={this.login}> Login </button>
+        <button onClick={this.loginWithGoogle}> Login </button>
       )}
       </React.Fragment>
     )

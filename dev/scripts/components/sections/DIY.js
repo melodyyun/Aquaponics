@@ -92,7 +92,10 @@ class DIY extends React.Component {
     return(
       <React.Fragment>
       {this.state.loggedIn === true ? (
-        <button onClick={this.logout}> Log Out </button>
+        <div>
+          <button onClick={this.logout}> Log Out </button>
+          <h2>Welcome this.state.userName</h2>
+        </div>
       ): (
         <button onClick={this.loginWithGoogle}> Login </button>
       )}

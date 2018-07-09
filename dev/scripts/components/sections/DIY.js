@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from 'firebase';
 import firebaseui  from 'firebaseui';
 import {firebaseConfig} from "../../firebase/firebase-config";
+import FarmTracker from "./FarmTracker";
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -87,6 +88,7 @@ class DIY extends React.Component {
         <div>
           <button onClick={this.logout}> Log Out </button>
           <h2>Welcome {this.state.userName}</h2>
+          <FarmTracker userId={this.state.userId}/>
         </div>
       ): (
         <button onClick={this.loginWithGoogle}> Login </button>

@@ -80,7 +80,6 @@ class DIY extends React.Component {
     //this.dbRef.off('value');
   };
 
-
   render() {
     return(
       <React.Fragment>

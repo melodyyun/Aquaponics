@@ -5,7 +5,7 @@ class PastFarms extends React.Component{
     return(
       <div className="past-farms">
         <h2>Past Farm Cyles</h2>
-
+      
       </div>
     )
   }

@@ -1,3 +1,4 @@
+//import Rebase from 're-base';
 import React from 'react';
 import firebase from 'firebase';
 import firebaseui  from 'firebaseui';

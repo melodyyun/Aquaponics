@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-class PastFarms extends React.Component{
-  render(){
-    return(
+class PastFarms extends React.Component {
+  render() {
+    return (
       <div className="past-farms">
-        <h2>Past Farm Cyles</h2>
-      
+        <h2>Past Farm Cycles</h2>
       </div>
-    )
+    );
   }
 }
 

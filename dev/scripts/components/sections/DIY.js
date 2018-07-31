@@ -90,7 +90,14 @@ class DIY extends React.Component {
             <FarmTracker userId={this.state.userId} />
           </div>
         ) : (
-          <button onClick={this.loginWithGoogle}> Login </button>
+          <div>
+            <button onClick={this.loginWithGoogle}> Login </button>
+            <p>
+              Nothing feels better than doing things yourself! Login to have
+              access to your own aquaponics farm tracker. Keep organized and on
+              top of all your crops and fish!
+            </p>
+          </div>
         )}
       </React.Fragment>
     );

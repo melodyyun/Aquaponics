@@ -7,7 +7,8 @@ class PastFarms extends React.Component {
       <div className="past-farms">
         <h2>Prices / Inventory</h2>
         {/* <AddProduceForm /> */}
-        
+        {/* display quantity and prices */}
+        {/* allow other to purchase and look at inventory */}
       </div>
     );
   }

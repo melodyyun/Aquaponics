@@ -5,8 +5,9 @@ class PastFarms extends React.Component {
   render() {
     return (
       <div className="past-farms">
-        <h2>Past Farm Cycles</h2>
-        <AddProduceForm />
+        <h2>Prices / Inventory</h2>
+        {/* <AddProduceForm /> */}
+        
       </div>
     );
   }
